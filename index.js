@@ -20,14 +20,14 @@ function deepestChild() {
   var counter = 0;
   var list = document.querySelectorAll('#grand-node > div');
   for (var i = 0; i < list.length; i++) {
-  var current_child = list[i];
-  while (current_child.querySelector(':first-child') !== null) {
-  counter += 1;
-  current_child = current_child.querySelector(':first-child');
-  deepestChild = current_child;
+    var current_child = list[i];
+    while (current_child.querySelector(':first-child') !== null) {
+    counter += 1;
+    current_child = current_child.querySelector(':first-child');
+    deepestChild = current_child;
 
 }
-  if (children[i] === undefined || children[i] < counter) {
+    if (children[i] === undefined || children[i] < counter) {
     children[i] = counter;
     answer = deepestChild;
 }
