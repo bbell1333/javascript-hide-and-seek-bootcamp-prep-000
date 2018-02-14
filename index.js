@@ -24,7 +24,7 @@ function deepestChild() {
   while (current_child.querySelector(':first-child') !== null) {
   counter += 1;
   current_child = current_child.querySelector(':first-child');
-  deepestChild = current_child;
+  let deepestChild = current_child;
 
 }
   if (children[i] === undefined || children[i] < counter) {
